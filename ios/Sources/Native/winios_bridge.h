@@ -27,6 +27,7 @@ typedef void (^WinIOSStateCallback)(void);
 @property (nonatomic, readonly) uint64_t usbEventsDelivered;
 @property (nonatomic, assign) BOOL useSafariForGuestLinks;
 @property (nonatomic, copy, nullable) WinIOSStateCallback onStateChanged;
+@property (nonatomic, copy, nullable) NSString *customMachineDirectory;
 
 - (nullable NSString *)takeGuestOpenURL;
 - (BOOL)takeGuestOAuthDone;
