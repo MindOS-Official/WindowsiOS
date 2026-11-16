@@ -257,6 +257,9 @@ static void unpack_progress_cb(uint64_t done, uint64_t total, void *opaque) {
 }
 
 - (NSString *)machineDirectory {
+    if (self.customMachineDirectory.length > 0) {
+        return self.customMachineDirectory;
+    }
     NSString *docs = [self documentsPath];
     NSString *win11Dir = [docs stringByAppendingPathComponent:@"Machines/Win11"];
     NSFileManager *fm = [NSFileManager defaultManager];
